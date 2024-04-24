@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { css, styled } from 'styled-components';
 
 const Header = () => {
@@ -23,8 +23,8 @@ const Header = () => {
             text: 'ABOUT',
         },
         {
-            href: '#project',
-            text: 'PROJECT',
+            href: '#experience',
+            text: 'EXPERIENCE',
         },
         {
             href: '#stacks',
@@ -49,9 +49,9 @@ const Header = () => {
                                 onClick={handleCloseToggle}
                                 className={router.hash === link.href ? 'active' : ''}
                             >
-                                <Link to={link.href}>
+                                <a href={link.href}>
                                     <span>{link.text}</span>
-                                </Link>
+                                </a>
                             </$Li>
                         );
                     })}
@@ -67,7 +67,7 @@ const Container = styled.header`
     position: fixed;
     top: 0;
 
-    padding: 0 20px;
+    padding: ${({ theme }) => theme.width.sectionPadding};
 
     width: 100%;
     max-width: ${({ theme }) => theme.width.desktop};
@@ -76,6 +76,10 @@ const Container = styled.header`
 
     display: flex;
     justify-content: space-between;
+
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
 `;
 
 const $Logo = styled.div<{ $toggle: boolean }>`
