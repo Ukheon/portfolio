@@ -1,10 +1,17 @@
 import Header from '@/components/resuable/Header';
+
 import styled from 'styled-components';
+import About from './About';
+import Experience from './Experience';
 
 const Root = () => {
     return (
         <RootContainer>
             <Header />
+            <$Main>
+                <About />
+                <Experience />
+            </$Main>
         </RootContainer>
     );
 };
@@ -17,3 +24,5 @@ const RootContainer = styled.div`
     height: auto;
     max-width: ${({ theme }) => theme.width.desktop};
 `;
+
+const $Main = styled.main``;

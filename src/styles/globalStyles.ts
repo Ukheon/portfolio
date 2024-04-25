@@ -44,18 +44,17 @@ export default createGlobalStyle`
 		font-size: 18px;
 		scroll-behavior: smooth;
 	}
-	
-	@media (max-width: 900px) {
+
+	@media screen and (max-width: ${({ theme }) => theme.mediaQueries.desktop}) {
 		html {
 			font-size: 16px;
 		}
-	}
+	};
 
-	@media (max-width: 500px) {
+	@media screen and (max-width: ${({ theme }) => theme.mediaQueries.mobile}) {
 		html {
 			font-size: 14px;
 		}
-	}
-
+	};
 
 `;
