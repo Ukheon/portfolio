@@ -6,6 +6,7 @@ export const theme = {
     },
     height: {
         header: '4.5rem',
+        sectionHeight: '9rem',
     },
     mediaQueries: {
         desktop: '900px',

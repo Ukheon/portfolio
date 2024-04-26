@@ -1,10 +1,25 @@
 // eslint-disable-next-line
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { css, styled } from 'styled-components';
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const isScrolled = window.scrollY > 0;
+            setScrolled(isScrolled);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     const router = useLocation();
 
     router.hash;
@@ -37,7 +52,7 @@ const Header = () => {
     ];
 
     return (
-        <Container>
+        <Container $isScroll={scrolled}>
             <$Logo $toggle={toggle}>PORTFOLIO</$Logo>
             <$Nav>
                 <$MenuButton $toggle={toggle} onClick={handleToggle} />
@@ -63,9 +78,16 @@ const Header = () => {
 
 export default Header;
 
-const Container = styled.header`
+const Container = styled.header<{ $isScroll: boolean }>`
     position: fixed;
     top: 0;
+
+    z-index: 99999;
+
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: ${(props) => (props.$isScroll ? '0 0 10px rgba(0,0,0, 0.1)' : '')};
+    transition: box-shadow 0.3s ease-in-out;
 
     padding: ${({ theme }) => theme.width.sectionPadding};
 
@@ -77,16 +99,24 @@ const Container = styled.header`
     display: flex;
     justify-content: space-between;
 
-    background-color: white;
     background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(10px);
+
+    @media screen and (max-width: ${({ theme }) => theme.mediaQueries.mobile}) {
+        margin-top: 0;
+        border-radius: 0;
+        background-color: white;
+        border-bottom: 1px solid black;
+    }
 `;
 
 const $Logo = styled.div<{ $toggle: boolean }>`
     font-size: 1.5rem;
     font-weight: 700;
+    z-index: 9999;
 
     color: ${({ $toggle }) => ($toggle ? 'white' : 'black')};
+    transition: color 0.5s ease-in-out;
 `;
 
 const $Nav = styled.nav``;

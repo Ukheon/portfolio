@@ -12,10 +12,11 @@ const SectionContainer = styled.section`
     max-width: ${({ theme }) => theme.width.desktop};
 
     height: 100%;
-    min-height: ${({ theme }) => `calc(100vh - ${theme.height.header})`};
+    min-height: ${({ theme }) => `calc(100vh - ${theme.height.sectionHeight})`};
 
     font-size: 1rem;
 
     margin: ${({ theme }) => theme.height.header} auto;
+    scroll-margin-top: ${({ theme }) => theme.height.header};
     padding: ${({ theme }) => theme.width.sectionPadding};
 `;

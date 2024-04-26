@@ -1,14 +1,20 @@
 // eslint-disable-next-line
+import Intro from '@/components/about/Intro';
 import Title from '@/components/resuable/Title';
-import Typing from '@/components/resuable/Typing';
+import { useObserver } from '@/hooks/resuable/useObserver';
+import Intersection from '@/layout/Intersection';
 import SectionLayout from '@/layout/SectionLayout';
-import { styled } from 'styled-components';
 
 const About = () => {
+    const ID = 'about';
+    const { isIntersecting } = useObserver(ID);
+
     return (
-        <SectionLayout id="about">
-            <Title text="ABOUT" />
-            <Typing texts={['안녕하세요.', '소프트웨어 엔지니어', '권욱헌입니다.']} />
+        <SectionLayout id={ID}>
+            <Intersection isIntersecting={isIntersecting}>
+                <Title text="ABOUT" />
+                <Intro />
+            </Intersection>
         </SectionLayout>
     );
 };

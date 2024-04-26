@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 import { joinBeforeTextList } from '@/utils/convert';
 import { useEffect, useState } from 'react';
-import { keyframes, styled } from 'styled-components';
+import { styled } from 'styled-components';
 
 type TypingProps = {
     texts: string[];
@@ -10,7 +10,7 @@ type TypingProps = {
 
 const Typing = ({ texts, speed }: TypingProps) => {
     const FIRST_INDEX = 0;
-    const TYPING_SPEED = 100;
+    const TYPING_SPEED = 75;
 
     const [typingText, setTypingText] = useState('');
     const [charIndex, setCharIndex] = useState(FIRST_INDEX);
@@ -42,16 +42,6 @@ const Typing = ({ texts, speed }: TypingProps) => {
 
 export default Typing;
 
-export const blinkAnimation = keyframes`
-
-	0%, 100% {
-		border-color: transparent;
-	}
-	50% {
-		border-color: white;
-	}
-`;
-
 const $P = styled.p`
     border-right: 5px solid transparent;
 `;
@@ -59,7 +49,7 @@ const $P = styled.p`
 const $Span = styled.span`
     white-space: pre-wrap;
 
-    background: linear-gradient(to right, #2e2e2e, #6c6c6c, #000000);
+    background: linear-gradient(45deg, #000000, #979797, #000000);
     background-clip: text;
     color: transparent;
 
@@ -69,9 +59,8 @@ const $Span = styled.span`
 
     border-right-width: 2px;
     border-right-style: solid;
-    animation: blink-caret 1s 4;
-
     border-color: transparent;
+    animation: blink-caret 1s 10;
 
     @keyframes blink-caret {
         from,

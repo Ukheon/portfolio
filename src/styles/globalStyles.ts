@@ -1,6 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
+	@font-face {
+		font-family: Pretendard;
+		src: url('./fonts/PretendardRegular.woff');
+	}
+
 	* {
 		margin: 0;
 		padding: 0;
@@ -24,7 +29,8 @@ export default createGlobalStyle`
 
 
 	body {
-		font-family: sans-serif;
+		font-family: Pretendard;
+
 
 		::-webkit-scrollbar {
 			width: 16px;

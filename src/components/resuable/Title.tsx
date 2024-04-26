@@ -11,7 +11,7 @@ const $Title = styled.h2`
     font-size: 2rem;
     font-weight: 700;
 
-    padding-top: 6rem;
-    margin-bottom: 3rem;
+    padding-top: 4rem;
+    margin-bottom: 4rem;
     border-bottom: 2px solid black;
 `;
