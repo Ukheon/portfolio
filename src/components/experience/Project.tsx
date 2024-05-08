@@ -36,6 +36,7 @@ const Project = ({ data }: { data: ProjectData }) => {
                     return (
                         <Contents key={content.text}>
                             {content.text}
+                            &nbsp;
                             <Assets assets={content.assets} />
                             {content.children?.map((childrenText) => {
                                 return (

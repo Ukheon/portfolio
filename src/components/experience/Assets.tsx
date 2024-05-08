@@ -1,6 +1,7 @@
 // eslint-disable-next-line
 import { useEffect, useState } from 'react';
 import { styled } from 'styled-components';
+import Accent from '../resuable/Accent';
 
 const Assets = ({ assets }: { assets: string[] | undefined }) => {
     const [toggle, setToggle] = useState(false);
@@ -30,7 +31,7 @@ const Assets = ({ assets }: { assets: string[] | undefined }) => {
     }
     return (
         <>
-            <$ToggleButton onClick={handleClick}>{assets && '사진'}</$ToggleButton>
+            <$ToggleButton onClick={handleClick}>사진</$ToggleButton>
             <Container onClick={handleClose} className={toggle ? 'show' : 'hide'}>
                 <$Assets onClick={(e) => e.stopPropagation()}>
                     <$Close src={'/assets/close.png'} onClick={handleClose} alt="close button" />
@@ -114,10 +115,10 @@ const $Img = styled.img`
 `;
 
 const $ToggleButton = styled.button`
+    position: relative;
     cursor: pointer;
     border: none;
     outline: none;
-    margin-left: 5px;
     background-color: whitesmoke;
     border-radius: 5px;
     font-size: 0.825rem;

@@ -44,10 +44,10 @@ export const EXPERIENCE_DATA: ExperienceData[] = [
                     {
                         text: '최대 100여 개의 사용자 입력데이터로 최대 300줄의 견적을 제공하는 자동견적 서비스를 개발했습니다.',
                         assets: [
-                            '/assets/automatic1.png',
-                            '/assets/automatic2.png',
-                            '/assets/automatic3.png',
-                            '/assets/automatic4.png',
+                            '/assets/project/automatic1.png',
+                            '/assets/project/automatic2.png',
+                            '/assets/project/automatic3.png',
+                            '/assets/project/automatic4.png',
                         ],
                         children: [
                             'react-hook-form를 사용해 폼 관리를 했습니다. 요구하는 정보가 많아 섹션를 구분하는 과정에서 formContext를 활용해 값들을 공유했고, fieldArray를 활용해 동적으로 폼을 생성했습니다.',
@@ -58,7 +58,7 @@ export const EXPERIENCE_DATA: ExperienceData[] = [
 
                     {
                         text: 'react-quill을 사용하여 인테리어 정보글을 게시하기 위한 WYSIWYG 에디터를 구현했습니다.',
-                        assets: ['/assets/editor.png', '/assets/blog.png'],
+                        assets: ['/assets/project/editor.png', '/assets/project/blog.png'],
                         children: [
                             'datauri로 미리보기를 제공하고 제출 시 파일로 변환하여 서버에서 s3에 업로드하도록 구현했습니다.',
                             'dom에 의존하는 라이브러리로 서버 사이드에서 불러올 경우 document is not defined 이슈가 발생해 Next.js의 dynamic import를 사용해 클라이언트 사이드에서 불러와 해결했습니다.',
@@ -66,7 +66,7 @@ export const EXPERIENCE_DATA: ExperienceData[] = [
                     },
                     {
                         text: '풀페이지 스크롤을 구현했습니다.',
-                        assets: ['/assets/fullpage.gif'],
+                        assets: ['/assets/project/fullpage.gif'],
                         children: [
                             'css vh 속성이 PC, 모바일 환경에서 다르게 적용되어 슬라이드시 화면이 밀리는 이슈가 발생해 접속한 디바이스 크기를 가져와 vh 속성을 커스텀하는 방식으로 해결했습니다.',
                             'IOS 저전력 모드에서 동영상이 자동 재생되지 않는 이슈가 발생해 useEffect 내부에서 영상이 재생되지 않는 경우 썸네일 이미지와 재생 버튼이 나타나게 개선했습니다.',
@@ -74,25 +74,30 @@ export const EXPERIENCE_DATA: ExperienceData[] = [
                     },
                     {
                         text: '챗봇 대화식 상담 신청 서비스를 개발했습니다',
-                        assets: ['/assets/consulting1.png', '/assets/consulting2.png', '/assets/consulting3.png'],
+                        assets: [
+                            '/assets/project/consulting1.png',
+                            '/assets/project/consulting2.png',
+                            '/assets/project/consulting3.png',
+                        ],
                         children: [
                             '신청 정보를 슬랙과 연결해 실시간 알림이 가도록 구현하고 구글 시트에 정보를 저장했습니다.',
                         ],
                     },
                     {
                         text: 'Atlas 전문 검색을 활용해 1011개의 인테리어 정보를 검색할 수 있게 구현했습니다.',
-                        assets: ['/assets/search.png'],
+                        assets: ['/assets/project/search.png'],
                     },
                     {
                         text: 'Jira, Confluence를 사용해 팀원들과 작업을 공유했으며 버전 관리를 위해 Bitbucket을 사용하고 git template를 적용해 일관성 있는 히스토리를 남겼습니다.',
-                        assets: ['/assets/jira.png', '/assets/gitlog.png'],
+                        assets: ['/assets/project/jira.png', '/assets/project/gitlog.png'],
                         children: [
                             '이슈를 슬랙으로 공유하던 과정에서 이전 이슈를 스크롤해 찾는 번거로움과 기존 메시지와 분리되어 있지 않아 빠른 대응이 어려워 Jira로 공유하는 방식으로 팀원들을 설득해 이슈 처리 과정을 분리해 관리했습니다.',
+                            'Bitbucket에서 버전 관리 및 Jira와 연결해 새로운 팀원이 조금 더 쉽게 합류할 수 있는 환경을 구축했습니다.',
                         ],
                     },
                     {
                         text: 'PC, 모바일 환경을 고려해 모든 페이지를 반응형으로 제작했습니다.',
-                        assets: ['/assets/pc.png', '/assets/mobile.png'],
+                        assets: ['/assets/project/pc.png', '/assets/project/mobile.png'],
                     },
                     {
                         text: 'Next.js 13v (pages router) + MongoDB Atlas + AWS EC2 & Nginx & Route53 & pm2를 사용해 개발 및 배포했습니다.',
@@ -123,14 +128,14 @@ export const EXPERIENCE_DATA: ExperienceData[] = [
                     },
                     {
                         text: 'hightchart 사용해 데이터 시각화',
-                        assets: ['/assets/gauge.png', '/assets/area.png'],
+                        assets: ['/assets/project/gauge.png', '/assets/project/area.png'],
                         children: [
                             '공모전을 통해 선정된 디자인을 반영해야하는 상황에 highchart 차트 UI에 추가로 커스텀하여 디자인을 맞추는 작업을 진행했습니다.',
                         ],
                     },
                     {
                         text: '사용자 이벤트로 회전하는 원형 네비게이션 구현',
-                        assets: ['/assets/rotate.gif'],
+                        assets: ['/assets/project/rotate.gif'],
                         children: [
                             '원형 둘레에 링크들을 배치하기 위해 부모 영역과 같은 크기로 설정한 뒤, 중심점에서 회전시켜 배치했습니다. 그러나 마지막 링크만 동작하는 이슈가 발생했습니다. 이를 해결하기 위해 getBoundingClientRect 메소드를 활용하여 부모 영역으로부터 상대적인 위치를 구한 값을 크기 변경 후 반영하여 모든 링크가 정상적으로 동작하게 구현했습니다.',
                             'User-Agent 파싱하여 웹/앱 상호작용하게 설계했습니다.',

@@ -12,7 +12,7 @@ const SectionContainer = styled.section`
     max-width: ${({ theme }) => theme.width.desktop};
 
     height: 100%;
-    min-height: ${({ theme }) => `calc(100vh - ${theme.height.sectionHeight})`};
+    /* min-height: ${({ theme }) => `calc(100vh - ${theme.height.sectionHeight})`}; */
 
     font-size: 1rem;
 

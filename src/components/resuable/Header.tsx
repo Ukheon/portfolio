@@ -42,8 +42,8 @@ const Header = () => {
             text: 'EXPERIENCE',
         },
         {
-            href: '#stacks',
-            text: 'STACKS',
+            href: '#skill',
+            text: 'SKILL',
         },
         {
             href: '#contact',

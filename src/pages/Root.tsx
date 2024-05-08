@@ -3,6 +3,7 @@ import Header from '@/components/resuable/Header';
 import styled from 'styled-components';
 import About from './About';
 import Experience from './Experience';
+import Skill from './Skill';
 
 const Root = () => {
     return (
@@ -11,6 +12,7 @@ const Root = () => {
             <$Main>
                 <About />
                 <Experience />
+                <Skill />
             </$Main>
         </RootContainer>
     );
