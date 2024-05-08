@@ -1,4 +1,5 @@
 // eslint-disable-next-line
+import { debounce } from '@/utils/debounce';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { css, styled } from 'styled-components';
@@ -7,14 +8,13 @@ const Header = () => {
     const [toggle, setToggle] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
+    const handleScroll = debounce(() => {
+        const isScrolled = window.scrollY > 0;
+        setScrolled(isScrolled);
+    }, 100);
+
     useEffect(() => {
-        const handleScroll = () => {
-            const isScrolled = window.scrollY > 0;
-            setScrolled(isScrolled);
-        };
-
         window.addEventListener('scroll', handleScroll);
-
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
@@ -52,6 +52,7 @@ const Header = () => {
     ];
 
     return (
+        // <Container className={scrolled ? 'scrolled' : ''}>
         <Container $isScroll={scrolled}>
             <$Logo $toggle={toggle}>PORTFOLIO</$Logo>
             <$Nav>
@@ -78,7 +79,7 @@ const Header = () => {
 
 export default Header;
 
-const Container = styled.header<{ $isScroll: boolean }>`
+const Container = styled.header<{ $isScroll?: boolean }>`
     position: fixed;
     top: 0;
 
@@ -86,7 +87,7 @@ const Container = styled.header<{ $isScroll: boolean }>`
 
     margin-top: 10px;
     border-radius: 10px;
-    box-shadow: ${(props) => (props.$isScroll ? '0 0 10px rgba(0,0,0, 0.1)' : '')};
+
     transition: box-shadow 0.3s ease-in-out;
 
     padding: ${({ theme }) => theme.width.sectionPadding};
@@ -101,6 +102,11 @@ const Container = styled.header<{ $isScroll: boolean }>`
 
     background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(10px);
+
+    box-shadow: ${(props) => (props.$isScroll ? '0 0 10px rgba(0,0,0, 0.1)' : '')};
+    &.scrolled {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
     @media screen and (max-width: ${({ theme }) => theme.mediaQueries.mobile}) {
         margin-top: 0;
