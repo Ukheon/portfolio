@@ -47,16 +47,11 @@ export default createGlobalStyle`
 	}
 
 	html {
-		font-size: 18px;
+		font-size: 16px;
 		scroll-behavior: smooth;
 	}
 
-	@media screen and (max-width: ${({ theme }) => theme.mediaQueries.desktop}) {
-		html {
-			font-size: 16px;
-		}
-	};
-
+	
 	@media screen and (max-width: ${({ theme }) => theme.mediaQueries.mobile}) {
 		html {
 			font-size: 14px;

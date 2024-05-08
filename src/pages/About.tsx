@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 import Intro from '@/components/about/Intro';
 import Title from '@/components/resuable/Title';
-import { useObserver } from '@/hooks/resuable/useObserver';
+import { useObserver } from '@/hooks/useObserver';
 import Intersection from '@/layout/Intersection';
 import SectionLayout from '@/layout/SectionLayout';
 
@@ -12,7 +12,7 @@ const About = () => {
     return (
         <SectionLayout id={ID}>
             <Intersection isIntersecting={isIntersecting}>
-                <Title text="ABOUT" />
+                <Title text="About" />
                 <Intro />
             </Intersection>
         </SectionLayout>

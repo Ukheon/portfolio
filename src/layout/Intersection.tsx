@@ -4,7 +4,7 @@ import { styled } from 'styled-components';
 
 type IntersectionProps = {
     isIntersecting: boolean;
-    children: ReactNode;
+    children?: ReactNode;
 };
 
 const Intersection = ({ children, isIntersecting }: IntersectionProps) => {
