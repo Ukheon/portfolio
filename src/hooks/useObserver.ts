@@ -1,22 +1,21 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export const useObserver = (id: string) => {
-    const [isIntersecting, setIsIntersecting] = useState(false);
     const navigate = useNavigate();
-    useEffect(() => {
-        const section = document.getElementById(id);
 
+    useEffect(() => {
+        const section = document.getElementById(id)!;
+        const threshold = Math.floor((window.innerHeight / section?.offsetHeight) * 100) / 100;
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         navigate('#' + id);
-                        setIsIntersecting(true);
                     }
                 });
             },
-            { threshold: 0.2, rootMargin: '-100px 0px' }
+            { threshold: threshold > 1 ? 1 : threshold, rootMargin: '30px 0px' }
         );
 
         observer.observe(section!);
@@ -25,6 +24,4 @@ export const useObserver = (id: string) => {
             observer.unobserve(section!);
         };
     }, [id]);
-
-    return { isIntersecting };
 };

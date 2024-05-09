@@ -6,12 +6,17 @@ import { css, styled } from 'styled-components';
 const Header = () => {
     const [toggle, setToggle] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    const DELAY = 100;
+    const DELAY = 50;
 
     const handleScroll = throttle(() => {
         const isScrolled = window.scrollY > 0;
         setScrolled(isScrolled);
     }, DELAY);
+
+    const handleLinkClick = (id: string) => {
+        const top: HTMLElement = document.querySelector(id)!;
+        window.scrollTo(0, top.offsetTop - 30);
+    };
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -52,7 +57,6 @@ const Header = () => {
     ];
 
     return (
-        // <Container className={scrolled ? 'scrolled' : ''}>
         <Container $isScroll={scrolled}>
             <$Logo $toggle={toggle}>PORTFOLIO</$Logo>
             <$Nav>
@@ -65,9 +69,7 @@ const Header = () => {
                                 onClick={handleCloseToggle}
                                 className={router.hash === link.href ? 'active' : ''}
                             >
-                                <a href={link.href}>
-                                    <span>{link.text}</span>
-                                </a>
+                                <span onClick={() => handleLinkClick(link.href)}>{link.text}</span>
                             </$Li>
                         );
                     })}
@@ -178,20 +180,15 @@ const $Ul = styled.ul<{ $toggle: boolean }>`
         padding: 20vh 0;
         line-height: 15vh;
         font-size: 30px;
-        a {
-            color: white !important;
-        }
     }
 `;
 
 const $Li = styled.li`
-    > a {
+    > span {
+        cursor: pointer;
         color: black;
         font-size: 1rem;
         font-weight: 700;
-    }
-
-    span {
         transition: border-bottom 0.5s ease;
         border-bottom: 2px solid transparent;
     }
