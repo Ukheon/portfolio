@@ -50,6 +50,7 @@ export const EXPERIENCE_DATA: ExperienceData[] = [
                             '/assets/project/automatic4.png',
                         ],
                         children: [
+                            'jspdf를 사용해 pdf 다운로드 기능을 구현했습니다.',
                             'react-hook-form를 사용해 폼 관리를 했습니다. 요구하는 정보가 많아 섹션를 구분하는 과정에서 formContext를 활용해 값들을 공유했고, fieldArray를 활용해 동적으로 폼을 생성했습니다.',
                             '사용자가 선택한 정보마다 id를 부여해 서버에 보내고 id와 선택한 값을 조합해 매칭되는 견적을 반환하는 구조를 설계했습니다.',
                             '시장에 따라 변화하는 견적을 비개발자가 업데이트 할 수 있게 구글 시트에 저장되어 있는 데이터를 MongoDB로 연동해 업데이트된 견적 정보가 DB에 반영되게 설계했습니다.',
@@ -117,7 +118,7 @@ export const EXPERIENCE_DATA: ExperienceData[] = [
                 name: '수자원공사 프로젝트 고도화',
                 period: '2022.09 ~ 2023.02',
                 team: '백엔드 1, 디자이너 1',
-                skill: 'jQuery, HTML, CSS',
+                skill: 'HTML, CSS, Javascript, jQuery',
                 description: '상수도 관련 정보를 제공하며, 수도 사용량 및 요금, 동파알림을 전달하는 서비스입니다.',
                 contents: [
                     {

@@ -36,12 +36,12 @@ const Wrapper = styled.div`
     display: flex;
     word-break: keep-all;
 
-    @media screen and (max-width: ${({ theme }) => theme.mediaQueries.mobile}) {
+    @media screen and (max-width: ${({ theme }) => theme.mediaQueries.desktop}) {
         flex-direction: column;
         gap: 30px;
     }
-    margin-bottom: 30px;
     &:not(:last-child) {
+        margin-bottom: 30px;
         border-bottom: 1px solid whitesmoke;
     }
 `;
