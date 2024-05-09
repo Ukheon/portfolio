@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import About from './About';
 import Experience from './Experience';
 import Skill from './Skill';
+import Contact from './Contact';
+import Footer from '@/components/resuable/Footer';
 
 const Root = () => {
     return (
@@ -13,7 +15,9 @@ const Root = () => {
                 <About />
                 <Experience />
                 <Skill />
+                <Contact />
             </$Main>
+            <Footer />
         </RootContainer>
     );
 };

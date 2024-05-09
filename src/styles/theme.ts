@@ -15,6 +15,7 @@ export const theme = {
     color: {
         gray100: '#f2f2f2',
         gray200: '#e2e2e2',
+        link: '#0000ee',
         sectionBackground: '#151515',
     },
 };
