@@ -57,7 +57,10 @@ export default Project;
 
 const Wrapper = styled.div`
     max-width: ${({ theme }) => theme.width.desktop};
-    margin-bottom: 4rem;
+
+    &:first-child {
+        margin-bottom: 4rem;
+    }
 `;
 
 const $Name = styled.h3`

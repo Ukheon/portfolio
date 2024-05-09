@@ -1,4 +1,3 @@
- 
 import { SkillData } from '@/static/skill';
 import { styled } from 'styled-components';
 
@@ -32,12 +31,12 @@ export default SkillList;
 const Wrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(115px, auto);
     grid-gap: 10px;
 
     @media screen and (max-width: ${({ theme }) => theme.mediaQueries.desktop}) {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+        grid-auto-rows: minmax(95px, auto);
     }
 `;
 
