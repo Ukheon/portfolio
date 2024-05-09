@@ -1,4 +1,3 @@
- 
 import Title from '@/components/resuable/Title';
 import SkillList from '@/components/skill/SkillList';
 import SectionLayout from '@/layout/SectionLayout';
@@ -7,6 +6,7 @@ import { styled } from 'styled-components';
 
 const Skill = () => {
     const ID = 'skill';
+
     return (
         <SectionLayout id={ID}>
             <Title text="Skill" />

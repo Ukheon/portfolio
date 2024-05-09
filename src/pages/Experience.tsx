@@ -1,18 +1,15 @@
- 
 import Company from '@/components/experience/Company';
 import Project from '@/components/experience/Project';
 import Title from '@/components/resuable/Title';
-import { useObserver } from '@/hooks/useObserver';
 import SectionLayout from '@/layout/SectionLayout';
 import { EXPERIENCE_DATA } from '@/static/experience';
 import { styled } from 'styled-components';
 
 const Experience = () => {
     const ID = 'experience';
-    useObserver(ID);
 
     return (
-        <SectionLayout id="experience">
+        <SectionLayout id={ID}>
             <Title text="Experience" />
             {EXPERIENCE_DATA.map((data) => {
                 return (

@@ -1,4 +1,3 @@
- 
 import Intro from '@/components/about/Intro';
 import Title from '@/components/resuable/Title';
 import SectionLayout from '@/layout/SectionLayout';

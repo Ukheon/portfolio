@@ -16,7 +16,7 @@ export const useObserver = (id: string) => {
                     }
                 });
             },
-            { threshold: 0.5 }
+            { threshold: 0.2, rootMargin: '-100px 0px' }
         );
 
         observer.observe(section!);

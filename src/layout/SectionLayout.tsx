@@ -1,7 +1,8 @@
- 
+import { useObserver } from '@/hooks/useObserver';
 import React from 'react';
 import { styled } from 'styled-components';
 const SectionLayout = ({ children, id }: { children?: React.ReactNode; id: string }) => {
+    useObserver(id);
     return <SectionContainer id={id}>{children}</SectionContainer>;
 };
 
