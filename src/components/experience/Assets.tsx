@@ -1,7 +1,5 @@
-// eslint-disable-next-line
 import { useEffect, useState } from 'react';
 import { styled } from 'styled-components';
-import Accent from '../resuable/Accent';
 
 const Assets = ({ assets }: { assets: string[] | undefined }) => {
     const [toggle, setToggle] = useState(false);

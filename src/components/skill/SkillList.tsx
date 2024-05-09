@@ -1,4 +1,4 @@
-// eslint-disable-next-line
+ 
 import { SkillData } from '@/static/skill';
 import { styled } from 'styled-components';
 

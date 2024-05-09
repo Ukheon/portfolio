@@ -1,4 +1,4 @@
-// eslint-disable-next-line
+ 
 import Company from '@/components/experience/Company';
 import Project from '@/components/experience/Project';
 import Title from '@/components/resuable/Title';

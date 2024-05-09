@@ -1,5 +1,4 @@
-// eslint-disable-next-line
-import { debounce } from '@/utils/debounce';
+import { throttle } from '@/utils/throttle';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { css, styled } from 'styled-components';
@@ -7,11 +6,12 @@ import { css, styled } from 'styled-components';
 const Header = () => {
     const [toggle, setToggle] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const DELAY = 100;
 
-    const handleScroll = debounce(() => {
+    const handleScroll = throttle(() => {
         const isScrolled = window.scrollY > 0;
         setScrolled(isScrolled);
-    }, 100);
+    }, DELAY);
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);

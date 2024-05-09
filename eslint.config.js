@@ -22,7 +22,7 @@ export default [
             'max-params': [1, 3],
 
             // 선언전 사용금지
-            'no-use-before-define': 2,
+            // 'no-use-before-define': 2,
 
             // 중복모듈 가져오기 금지
             'no-duplicate-imports': 2,
@@ -65,7 +65,7 @@ export default [
             'no-var': 2,
 
             // 화살표 함수사용시 스코프 생성 필수
-            'arrow-body-style': [2, 'always'],
+            // 'arrow-body-style': [2, 'always'],
 
             // Equal Operator(비교연산자) 대신, Strict Equal Operator 연산자만 사용
             eqeqeq: 2,

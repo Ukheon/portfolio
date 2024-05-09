@@ -1,4 +1,4 @@
-// eslint-disable-next-line
+ 
 import Title from '@/components/resuable/Title';
 import SkillList from '@/components/skill/SkillList';
 import SectionLayout from '@/layout/SectionLayout';

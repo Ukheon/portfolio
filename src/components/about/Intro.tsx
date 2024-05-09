@@ -1,7 +1,5 @@
-// eslint-disable-next-line
-import { keyframes, styled } from 'styled-components';
-import Typing from '../resuable/Typing';
-import Accent from '../resuable/Accent';
+ 
+import { styled } from 'styled-components';
 import Value from './Value';
 import Me from './Me';
 

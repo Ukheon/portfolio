@@ -1,4 +1,4 @@
-// eslint-disable-next-line
+ 
 import { styled } from 'styled-components';
 
 const Info = () => {
@@ -18,7 +18,7 @@ const Info = () => {
                 <$Li>
                     <span>GITHUB</span>
                     <span>
-                        <a href="https://github.com/Ukheon" target="_blank">
+                        <a href="https://github.com/Ukheon" target="_blank" rel="noreferrer">
                             https://github.com/Ukheon
                         </a>
                     </span>

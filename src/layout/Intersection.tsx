@@ -1,6 +1,4 @@
-// eslint-disable-next-line
 import React, { ReactNode } from 'react';
-import { styled } from 'styled-components';
 
 type IntersectionProps = {
     isIntersecting: boolean;
