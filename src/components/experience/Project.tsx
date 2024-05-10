@@ -58,6 +58,9 @@ export default Project;
 const Wrapper = styled.div`
     max-width: ${({ theme }) => theme.width.desktop};
 
+    &:not(:last-child) {
+        margin-bottom: 4rem;
+    }
     &:first-child {
         margin-bottom: 4rem;
     }
