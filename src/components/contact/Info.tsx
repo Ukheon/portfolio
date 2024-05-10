@@ -1,4 +1,3 @@
- 
 import { styled } from 'styled-components';
 
 const Info = () => {
@@ -12,7 +11,7 @@ const Info = () => {
                 <$Li>
                     <span>EMAIL</span>
                     <span>
-                        <a href="mailto:dnrgjs33@gmail.com">dnrgjs33@gmail.com</a>
+                        <a href="mailto:dnrgjs33@naver.com">dnrgjs33@naver.com</a>
                     </span>
                 </$Li>
                 <$Li>
