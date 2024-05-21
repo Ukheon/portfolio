@@ -167,7 +167,7 @@ export const EXPERIENCE_DATA: ExperienceData[] = [
                 description: '자사가 보유한 무전원 지문인식 기술을 활용한 출입관리 서비스입니다.',
                 contents: [
                     {
-                        text: 'Axios Interceptors 와 rebounce를 활용해 API 에러핸들링을 설계했습니다.',
+                        text: 'Axios Interceptors 와 debounce를 활용해 API 에러핸들링을 설계했습니다.',
                         children: [
                             'Interceptors로 request에 Access Token을 담아 전달하여 인증을 거쳤으며, 만료된 경우 reponse에서 refresh token을 전달해 새로 발급받은 access token으로 기존 요청의 데이터를 반환하는 로직을 구현했습니다. ',
                             '두개 이상의 API를 호출하는 debounce로 재발급 로직을 한번만 실행시킨뒤 쌓인 요청의 데이터들을 반환하는 방식으로 해결했습니다.',
