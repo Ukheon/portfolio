@@ -149,7 +149,8 @@ export const EXPERIENCE_DATA: ExperienceData[] = [
                 period: '2022.08 ~ 2022.09',
                 team: '1인 개발',
                 skill: 'Typescript, Cypress',
-                description: '내부 솔루션 GS인증 과정에서 휴먼에러로 실패한 이후 방지하기 위한 테스트 자동화 도입',
+                description:
+                    '내부 솔루션 GS인증 과정에서 휴먼에러로 실패한 이후 반복되지 않기 위해 테스트 자동화를 도입했습니다.',
                 contents: [
                     {
                         text: '제공된 시나리오 45개 중 36개 시나리오를 자동화 시키면서 휴먼에러를 방지하며 테스트에 소요되는 시간을 절반으로 줄였습니다.',
@@ -185,7 +186,7 @@ export const EXPERIENCE_DATA: ExperienceData[] = [
                     {
                         text: 'AWS S3 + CloudFornt로 서비스 배포했습니다.',
                         children: [
-                            '기존엔 AWS Lignsail + Nginx로 서비스를 배포한 상황에서 해외지역 데모를 준비하기 위해 AWS CloudFront를 사용해 서비스를 다시 배포했습니다.',
+                            '기존엔 AWS Lightsail + Nginx로 서비스를 배포한 상황에서 해외지역 데모를 준비하기 위해 AWS CloudFront를 사용해 서비스를 다시 배포했습니다.',
                         ],
                     },
                 ],
