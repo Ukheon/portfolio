@@ -117,7 +117,7 @@ export const EXPERIENCE_DATA: ExperienceData[] = [
             {
                 name: '수자원공사 프로젝트 고도화',
                 period: '2022.09 ~ 2023.02',
-                team: '백엔드 1, 디자이너 1',
+                team: '프론트엔드 1, 백엔드 1, 디자이너 1',
                 skill: 'HTML, CSS, Javascript, jQuery',
                 description: '상수도 관련 정보를 제공하며, 수도 사용량 및 요금, 동파알림을 전달하는 서비스입니다.',
                 contents: [
@@ -163,7 +163,7 @@ export const EXPERIENCE_DATA: ExperienceData[] = [
             {
                 name: '출입통제 솔루션',
                 period: '2022.08 ~ 2022.09',
-                team: '백엔드 1',
+                team: '프론트엔드 1, 백엔드 1',
                 skill: 'React, Typescript',
                 description: '자사가 보유한 무전원 지문인식 기술을 활용한 출입관리 서비스입니다.',
                 contents: [

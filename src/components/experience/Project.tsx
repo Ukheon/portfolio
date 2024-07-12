@@ -16,19 +16,19 @@ const Project = ({ data }: { data: ProjectData }) => {
             <$Description>
                 <p>
                     <b>설명 :</b>
-                    <span>{data.description}</span>
-                </p>
-                <p>
-                    <b>팀원 :</b>
-                    <span>{data.team}</span>
+                    <span>&nbsp;{data.description}</span>
                 </p>
                 <p>
                     <b>기간 :</b>
-                    <span>{data.period}</span>
+                    <span>&nbsp;{data.period}</span>
                 </p>
                 <p>
                     <b>기술 :</b>
-                    <span>{data.skill}</span>
+                    <span>&nbsp;{data.skill}</span>
+                </p>
+                <p>
+                    <b>팀 구성 :</b>
+                    <span>&nbsp;{data.team}</span>
                 </p>
             </$Description>
             <Container>
@@ -89,7 +89,6 @@ const $Description = styled.div`
     > p {
         display: flex;
         > b {
-            min-width: 40px;
         }
     }
 `;
