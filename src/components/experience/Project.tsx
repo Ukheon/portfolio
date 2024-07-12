@@ -27,7 +27,7 @@ const Project = ({ data }: { data: ProjectData }) => {
                     <span>&nbsp;{data.skill}</span>
                 </p>
                 <p>
-                    <b>팀 구성 :</b>
+                    <b>팀원 :</b>
                     <span>&nbsp;{data.team}</span>
                 </p>
             </$Description>
