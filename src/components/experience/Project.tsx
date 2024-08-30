@@ -89,6 +89,7 @@ const $Description = styled.div`
     > p {
         display: flex;
         > b {
+            white-space: nowrap;
         }
     }
 `;
