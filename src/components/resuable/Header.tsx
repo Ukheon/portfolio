@@ -203,6 +203,9 @@ const $Li = styled.li`
     }
 
     @media screen and (max-width: ${({ theme }) => theme.mediaQueries.mobile}) {
+        span {
+            color: white;
+        }
         &:hover {
             cursor: pointer;
             transition: background-color 0.5s ease;
